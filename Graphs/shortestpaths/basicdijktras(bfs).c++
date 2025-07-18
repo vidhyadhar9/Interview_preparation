@@ -23,7 +23,8 @@ vector<int> bfs(vector<vector<int>>& graph, int source) {
         for(auto  it:graph[node]) {
            if(distance[it]>distance[node]+1){
                 q.push(it);
-                distance[it]=distance[node]+1; // update the distance to the node and instead of 1 you can add the weight if it is a weighted graph
+                distance[it]=distance[node]+1; 
+                // update the distance to the node and instead of 1 you can add the weight if it is a weighted graph
                 //if the graph is weighted then you can use a pair in the queue to store the weight as well
                 //for example if the edge is (u, v) with weight w then we will
            }
