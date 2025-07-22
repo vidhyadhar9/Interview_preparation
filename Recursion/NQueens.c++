@@ -1,12 +1,12 @@
 /*NQueens is the classical problem where we use rows and cols of the  of teh chess board 
-it is the best of backtracking algorithm in this we place the Q at of the place in the chass board and look a
-against the constrainst
+it is the best of backtracking algorithm in this we place the Queen at of the place in the chess board and look a
+against the constraints
 
 the constraints are;
 no 2 queens are to be placed in the same row, column, or diagonal
-so what we do in the coding poart is we try to place in the chess board by validating the constraints and then we place on the locality where we fell 
-no constarint is voilated but if we feek constraint is voilated in any on=f the oath then we revoke that queen in that lace and try to place
-in suitable place if we cannot place then we will come back then we move current queen to any other place
+so what we do in the coding part is we try to place in the chess board by validating the constraints and then we place on the locality where we feel
+no constraint is violated but if we feel constraint is violated in any one of the path then we revoke that queen in that place and try to place
+in suitable place if we cannot place then we will come back then we move current queen to next place
 we will try to backtrack for every impossible move and try  to get the correct place for each queen
 */
 

@@ -1,6 +1,6 @@
 // User function template for C++
 
-/*Rate in a Maze
+/*Rat in a Maze
 it is a backtracking problem where we have to find all the paths from the top left corner to the bottom right corner of a grid.
 We can only move in 4 directions: up, down, left, and right.
 while moving we have to store the path in a string and return all the paths.
