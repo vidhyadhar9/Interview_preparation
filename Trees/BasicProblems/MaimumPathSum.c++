@@ -9,10 +9,10 @@
 //giving max sum
 
 //use reference variable to track the maximum path sum
-int maxiPathSum(TreeNode* root) {
+int maxiPathSum(TreeNode* root,int &maxi) {
     if(root==NULL)return 0;
-    int lh=max(0,maxiPathSum(root->left)); //if the left child is negative then we will take 0
-    int rh=max(0,maxiPathSum(root->right)); //if the right child is negative then we will take 0
+    int lh=max(0,maxiPathSum(root->left,maxi)); //if the left child is negative then we will take 0
+    int rh=max(0,maxiPathSum(root->right,maxi)); //if the right child is negative then we will take 0
     maxi=max(maxi,lh+rh+root->val); //we will take the maximum of the current node and the left and right child
     return root->val+max(lh,rh); //returning the maximum path sum from the current node
 }
