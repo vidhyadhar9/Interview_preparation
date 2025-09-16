@@ -18,10 +18,7 @@ TreeNode LCA(TreeNode* root, int a, int b) {
         return LCA(root->right, a, b);
     }
     
-    if( a == root->val || b == root->val) {
-        return root; // If one of the nodes is the root, return root
-    }
-    if((root->val > a && root->val < b) || (root->val < a && root->val > b)) {
+    if((root->val > a && root->val < b) || (root->val < a && root->val > b)||(a == root->val || b == root->val)) {
         return root; // If one node is in left and other is in right, return root
     }
     // If we reach here, then root is the LCA

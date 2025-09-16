@@ -3,7 +3,7 @@ then check whether the values that were stored are in the asc or not
 if not then it is not a BST */
 
 /*second approach is best approach range validating 
-as we know if it is a BST tree then the left subtree of the given node should be less than the root node and right subtree should be grreater than the root 
+as we know if it is a BST tree then the left subtree of the given node should be less than the root node and right subtree should be greater than the root 
 node so for the root node we may not the upper and lower range so we will use max and minimim as inT_MAX and INT_MIN
 as there range and for left suntree we use [min, root->data] and 
 for right subtree we use [root->data, max]

@@ -57,15 +57,16 @@ class Solution {
     }
     void path(Node *root,string &s,int target,vector<string>&ans){
         if(root==NULL)return ;
+        if(root->data==target){
+            ans.push_back(s);
+        }
         s.push_back('l');
         path(root->left,s,target,ans);
         s.pop_back();
         s.push_back('r');
         path(root->right,s,target,ans);
         s.pop_back();
-        if(root->data==target){
-            ans.push_back(s);
-        }
+        
     }
     int NumberOFTurns(struct Node* root, int first, int second) {
         // Your code goes here
