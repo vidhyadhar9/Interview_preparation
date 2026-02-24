@@ -87,6 +87,7 @@ class Node
     }
 };
 */
+//everything should be passed by reference only
 
 class Solution {
   public:
@@ -114,5 +115,67 @@ class Solution {
             swap(last->data,first->data);
         }
        
+    }
+};
+
+
+
+
+
+
+
+
+
+
+///other way 
+/*
+class Node
+{
+    public:
+    int data;
+    Node *left, *right;
+    Node(int val)
+    {
+        data = val;
+        left = right = NULL;
+    }
+};
+*/
+
+//we have to check whether the root
+//inorder Traversal
+
+void check(Node *root, Node* &first, Node* &middle, Node* &last, Node* &previous){
+    if(root==NULL)return ;
+    
+    check(root->left,first,middle,last,previous);
+    if(previous and root->data < previous->data){
+        if(!first){
+            first=previous;
+            middle = root;
+        }else last=root;
+        
+    }
+    previous = root;
+    check(root->right,first,middle,last,previous);
+    
+}
+// void swap(Node *first,Node *second){
+//     Node *temp = first;
+//     first = second;
+//     second = temp;
+// }
+class Solution {
+  public:
+    void correctBST(Node* root) {
+        // add code here.
+        Node *first=nullptr,*middle=nullptr,*last=nullptr,*previous=nullptr;
+        check(root,first,middle,last,previous);
+        if(first and last){
+            swap(first->data,last->data);
+        }
+        else if(first and middle){
+            swap(first->data,middle->data);
+        } 
     }
 };
